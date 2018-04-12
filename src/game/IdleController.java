@@ -38,7 +38,7 @@ public class IdleController {
 					buildingModel.addElapsed(getFPS()); 
 					model.currency += buildingModel.getMoney();
 					if(buildingModel.getUpgradeCost() > model.currency) {
-						building.getButton().setEnabled(false);
+						buildingModel.getButton().setEnabled(false);
 					}
 					else {
 						building.getButton().setEnabled(true);
