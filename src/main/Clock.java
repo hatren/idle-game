@@ -5,9 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.Timer;
 
-
 public class Clock {
-	
 	// Vars
 	private int time;
 	private Timer timer;

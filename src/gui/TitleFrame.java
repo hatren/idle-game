@@ -10,7 +10,6 @@ import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
 public class TitleFrame {
-	
 	// Vars
 	private JFrame titleFrame = new JFrame();
 	private JTextArea title = new JTextArea("Idle Game");

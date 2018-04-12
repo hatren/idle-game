@@ -1,22 +1,21 @@
-package user;
+package game;
 
 import java.util.ArrayList;
 
 import assets.Building;
 import assets.Item;
 
-public class Player {
+public class PlayerModel {
 	// Vars
 	private String userName;
-	private ArrayList<Building> buildingList;
-	private ArrayList<Item> itemList;
+	private ArrayList<BuildingModel> buildingList;
 	public double currency = 1;
 	public double income;
 	
 	// Ctor
 	// Make it so it reads a file to load a player
-	public Player() {
-		buildingList = new ArrayList<Building>();
+	public PlayerModel() {
+		buildingList = new ArrayList<BuildingModel>();
 	}
 	
 	// getCurrency()
@@ -27,24 +26,19 @@ public class Player {
 	// getIncome()
 	public double getIncome() {
 		income = 0;
-		for(Building building: buildingList) {
+		for(BuildingModel building: buildingList) {
 			income += (building.getIncome()/building.getRate());
 		}
 		return income;
 	}
 	
 	// getBuildingList()
-	public ArrayList<Building> getBuildingList() {
+	public ArrayList<BuildingModel> getBuildingList() {
 		return buildingList;
 	}
 	
-	// addItem()
-	public void addItem(Item item) {
-		itemList.add(item);
-	}
-	
 	// addBuilding()
-	public void addBuilding(Building building) {
+	public void addBuilding(BuildingModel building) {
 		buildingList.add(building);
 	}
 	
